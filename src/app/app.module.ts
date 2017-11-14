@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
+import { APP_CONFIG, AppConfig } from './app.config';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [{ provide: APP_CONFIG, useValue: AppConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
