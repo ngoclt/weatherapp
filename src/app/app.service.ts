@@ -26,7 +26,7 @@ export class AppService {
     
   }
 
-  getWeatherInformation(path: string, param: any): Observable < any > {
+  request(path: string, param: any): Observable < any > {
     const url = this.config.apiEndpoint + path;
     const params: URLSearchParams = new URLSearchParams();
     for (const key in param) {

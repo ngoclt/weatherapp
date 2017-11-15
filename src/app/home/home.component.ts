@@ -17,22 +17,24 @@ export class HomeComponent implements OnInit {
   constructor(private service: AppService) { }
 
   ngOnInit() {
-    this.fetchWeatherInfo();
+    this.fetch();
   }
 
-  fetchWeatherInfo() {
-      this.service.getWeatherInformation('weather', {
-        limit: 1
-      })
-      .subscribe(
-        result => {
-          if (result.data.length > 0) {
-            this.weather = result.data[0];
-          }
-        },
-        error => {
-          this.errorMessage = error;
+  fetch() {
+    this.service.request('weather/latest', null)
+    .subscribe(
+      result => {
+        if (result.data != null) {
+          this.weather = {
+            temperature: Math.ceil(result.data.temperature),
+            humidity: Math.ceil(result.data.humidity_out),
+            pressure: Math.ceil(result.data.pressure)
+          };
         }
-      );
-    }
+      },
+      error => {
+        this.errorMessage = error;
+      }
+    );
+  }
 }
