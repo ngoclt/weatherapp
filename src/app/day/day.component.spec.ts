@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HumidityComponent } from './humidity.component';
+import { DayComponent } from './day.component';
 
-describe('HumidityComponent', () => {
-  let component: HumidityComponent;
-  let fixture: ComponentFixture<HumidityComponent>;
+describe('HistoryComponent', () => {
+  let component: DayComponent;
+  let fixture: ComponentFixture<DayComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HumidityComponent ]
+      declarations: [ DayComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HumidityComponent);
+    fixture = TestBed.createComponent(DayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,13 +3,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppService } from '../app.service';
 
 @Component({
-  selector: 'app-history',
+  selector: 'app-day',
   providers: [AppService],
-  templateUrl: './history.component.html',
-  styleUrls: ['./history.component.css'],
+  templateUrl: './day.component.html',
+  styleUrls: ['./day.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class HistoryComponent implements OnInit {
+export class DayComponent implements OnInit {
 
   weathers: any;
   errorMessage: string;
@@ -29,10 +29,10 @@ export class HistoryComponent implements OnInit {
           for (let record of result.data) {
             let weather = {
               date_time: new Date(record.date_time),
-              temperature: Math.ceil(record.temperature),
-              humidity: Math.ceil(record.humidity),
-              light: Math.ceil(record.light),
-              rain: Math.ceil(record.rain) === -100 ? 'NA' : Math.ceil(record.rain),
+              temperature: record.temperature,
+              humidity: record.humidity,
+              light: record.light,
+              rain: record.rain === -100 ? 'NA' : record.rain,
             }
             this.weathers.push(weather);
           }

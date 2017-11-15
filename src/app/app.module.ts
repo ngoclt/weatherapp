@@ -10,9 +10,8 @@ import { AppComponent } from './app.component';
 import { APP_CONFIG, AppConfig } from './app.config';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
-import { HistoryComponent } from './history/history.component';
-import { WindspeedComponent } from './windspeed/windspeed.component';
-import { HumidityComponent } from './humidity/humidity.component';
+import { DayComponent } from './day/day.component';
+import { WeekComponent } from './week/week.component';
 import { MapComponent } from './map/map.component';
 
 const appRoutes: Routes = [
@@ -21,16 +20,12 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'history',
-    component: HistoryComponent
+    path: 'day',
+    component: DayComponent
   },
   {
-    path: 'windspeed',
-    component: WindspeedComponent
-  },
-  {
-    path: 'humidity',
-    component: HumidityComponent
+    path: 'week',
+    component: WeekComponent
     },
   {
     path: '',
@@ -48,9 +43,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    HistoryComponent,
-    WindspeedComponent,
-    HumidityComponent,
+    DayComponent,
+    WeekComponent,
     MapComponent
   ],
   imports: [

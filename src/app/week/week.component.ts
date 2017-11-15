@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-windspeed',
-  templateUrl: './windspeed.component.html',
-  styleUrls: ['./windspeed.component.css'],
+  selector: 'app-week',
+  templateUrl: './week.component.html',
+  styleUrls: ['./week.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class WindspeedComponent implements OnInit {
+export class WeekComponent implements OnInit {
 
   constructor() { }
 
