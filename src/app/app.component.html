@@ -1,3 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-home #home></app-home>
-
+<app-menu #menu></app-menu>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>TAMPERE WEATHER APPLICATION</h1>
+          <p>This Web Application is developed with Angular 2 for User Interface Applications course at Tampere University of Applied Sciences - TAMK.
+            <br />
+            Data is being collected by a Weather Station which is located at TAMK, and stored to our web server.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container marketing">    
+  <!-- Three columns of text below the carousel -->
+  <router-outlet></router-outlet>
+</div>    
