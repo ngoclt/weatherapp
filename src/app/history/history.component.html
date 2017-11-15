@@ -1,40 +1,30 @@
 <div class="row">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Date time</th>
-        <th>Temperature</th>
-        <th>Humidity</th>
-        <th>Wind speed</th>
-        <th>Wind direction</th>
-        <th>Pressure</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-        <td>John</td>
-        <td>Doe</td>
-        <td>John</td>
-      </tr>
-      <tr>
-          <td>John</td>
-          <td>Doe</td>
-          <td>john@example.com</td>
-          <td>John</td>
-          <td>Doe</td>
-          <td>John</td>
-      </tr>
-      <tr>
-          <td>John</td>
-          <td>Doe</td>
-          <td>john@example.com</td>
-          <td>John</td>
-          <td>Doe</td>
-          <td>John</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3>WEATHER IN LAST 24H AT TAMPERE</h3>
+  <ng-container *ngIf="weathers || errorMessage; else elseBlockForInfo">
+    <ng-container *ngIf="weathers">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Date time</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Light</th>
+            <th>Rain</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let record of weathers">
+                <td>{{record.date_time}}</td>
+                <td>{{record.temperature}}&#8451;</td>
+                <td>{{record.humidity}}%</td>
+                <td>{{record.light}}</td>
+                <td>{{record.rain}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </ng-container>
+    <ng-template #elseBlockForInfo>
+      <div class="alert alert-success">Loading weather info...</div>
+    </ng-template>
+  </ng-container>
 </div>
