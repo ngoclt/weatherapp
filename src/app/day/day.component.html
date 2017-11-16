@@ -1,11 +1,13 @@
 <div class="row">
-  <h3>WEATHER IN LAST 24H AT TAMPERE</h3>
+  <div class="well well-sm">
+      <h4>WEATHER IN LAST 24H AT TAMPERE</h4>
+  </div>
   <ng-container *ngIf="weathers || errorMessage; else elseBlockForInfo">
     <ng-container *ngIf="weathers">
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Date time</th>
+            <th>Time</th>
             <th>Temperature</th>
             <th>Humidity</th>
             <th>Light</th>

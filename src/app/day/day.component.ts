@@ -25,10 +25,13 @@ export class DayComponent implements OnInit {
     .subscribe(
       result => {
         this.weathers = []
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric' };
         if (result.data != null) {
           for (let record of result.data) {
+            let date = new Date(record.date_time);
+            let dateString = date.toLocaleDateString("en-US", options);
             let weather = {
-              date_time: new Date(record.date_time),
+              date_time: dateString,
               temperature: record.temperature,
               humidity: record.humidity,
               light: record.light,
