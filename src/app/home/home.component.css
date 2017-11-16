@@ -1,6 +1,21 @@
 #map {
   margin-bottom: 20px;
 }
+.gauge-chart {
+  text-align: center;
+}
+
+.gauge {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 30px auto;
+}
+
+.gauge svg {
+  display: block;
+  margin: 0 auto;
+}
 
 ul.weather {
   text-align: center;

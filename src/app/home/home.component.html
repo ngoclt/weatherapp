@@ -4,15 +4,21 @@
 
 <ng-container *ngIf="weather || errorMessage; else elseBlockForInfo">
   <ng-container *ngIf="weather">
-    <div class="row">
-        <ul class="weather list-group">
-          <li class="list-group-item"><h3>Temperature: {{weather.temperature}}&#8451;</h3></li>
-          <li class="list-group-item"><h4>Humidity: {{weather.humidity}}%</h4></li>
-          <li class="list-group-item"><h4>Pressure: {{weather.pressure}} hPa</h4></li>
-        </ul>
+    <div class="row gauge-chart">
+        <h3>TEMPERATURE: {{weather.temperature}}&#8451;</h3>
+        <p>Humidity: {{weather.humidity}}%</p>
+        <p>Pressure: {{weather.pressure}} hPa</p>
+        <div class="gauge">
+          <google-chart #ggChart [data]="gauge"></google-chart>
+        </div>
     </div>
   </ng-container>
   <ng-template #elseBlockForInfo>
     <div class="alert alert-success">Loading weather info...</div>
   </ng-template>
 </ng-container>
+
+
+
+
+

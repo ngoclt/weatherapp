@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from "@angular/http";
 import { AgmCoreModule } from '@agm/core';
 
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
 import { AppComponent } from './app.component';
 import { APP_CONFIG, AppConfig } from './app.config';
@@ -50,6 +51,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpModule,
+    Ng2GoogleChartsModule,
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({ 
       apiKey: 'AIzaSyCkFYA8ZwTfPE5Jb3eOiISvaVjniuXhcRc'
