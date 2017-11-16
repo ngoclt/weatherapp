@@ -1,3 +1,6 @@
-<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" style="height: 300px">
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" 
+    [mapTypeControl]="false" [mapDraggable]="false" 
+    [disableDoubleClickZoom]="true" [zoomControl]="false" 
+    [streetViewControl]="false" [minZoom]="14" [maxZoom]="14" style="height: 300px">
     <agm-marker [latitude]="lat" [longitude]="lng" [label]="labelOptions"></agm-marker>
 </agm-map>
