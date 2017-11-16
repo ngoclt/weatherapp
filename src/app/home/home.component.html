@@ -2,7 +2,7 @@
   <app-map></app-map>
 </div>
 
-<ng-container *ngIf="weather || errorMessage; else elseBlockForInfo">
+<ng-container *ngIf="weather || errorMessage">
   <ng-container *ngIf="weather">
     <div class="row gauge-chart">
         <h3>TEMPERATURE: {{weather.temperature}}&#8451;</h3>
@@ -13,9 +13,6 @@
         </div>
     </div>
   </ng-container>
-  <ng-template #elseBlockForInfo>
-    <div class="alert alert-success">Loading weather info...</div>
-  </ng-template>
 </ng-container>
 
 
